@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+Disallow: /App_Data/
+Disallow: /*.css$
+Disallow: /*.js$
+
+# Específico para motores de busca principais
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Específico para IAs
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Sitemap
+Sitemap: https://info.cassiofernandooliveira.com.br/sitemap.xml

@@ -1,0 +1,1143 @@
+/* Reset e configurações base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Classes para SEO e acessibilidade */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Otimizações de performance para mobile */
+@media (max-width: 768px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeSpeed;
+    }
+    
+    .contact-card {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform;
+    }
+    
+    .floating-circle {
+        will-change: transform, opacity;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+        -45deg,
+        rgb(230, 106, 24),
+        rgb(255, 140, 60),
+        rgb(82, 50, 19),
+        rgb(120, 80, 40),
+        rgba(0,2,6,1),
+        rgb(185, 63, 6),
+        rgb(230, 106, 24)
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay com brilho pulsante */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.05) 30%,
+        transparent 70%
+    );
+    animation: shimmer 6s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Elementos flutuantes decorativos */
+.floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    animation: float 20s infinite linear;
+}
+
+.circle-1 {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: -10%;
+    animation-delay: 0s;
+    animation-duration: 25s;
+}
+
+.circle-2 {
+    width: 60px;
+    height: 60px;
+    top: 60%;
+    left: -5%;
+    animation-delay: -5s;
+    animation-duration: 30s;
+}
+
+.circle-3 {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: -8%;
+    animation-delay: -10s;
+    animation-duration: 35s;
+}
+
+.circle-4 {
+    width: 40px;
+    height: 40px;
+    top: 80%;
+    left: -3%;
+    animation-delay: -15s;
+    animation-duration: 20s;
+}
+
+.circle-5 {
+    width: 120px;
+    height: 120px;
+    top: 40%;
+    left: -12%;
+    animation-delay: -20s;
+    animation-duration: 40s;
+}
+
+.circle-6 {
+    width: 70px;
+    height: 70px;
+    top: 5%;
+    left: -6%;
+    animation-delay: -8s;
+    animation-duration: 28s;
+}
+
+/* Container principal */
+.container {
+    background-image: url("../imagem/madeira.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 
+        0 20px 60px rgba(0,2,6,0.8),
+        inset 0 0 120px rgba(0,0,0,0.3);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.container > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Seção do cabeçalho */
+.header-section {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeInDown 1s ease-out;
+    position: relative;
+    z-index: 10;
+}
+
+/* Classe para elementos que devem ficar sempre visíveis */
+.always-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* Classe para elementos que podem ser ocultados */
+.hideable {
+    transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
+}
+
+/* Estado oculto para elementos hideáveis */
+.hideable.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #fff, #f0f0f0, #ddd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+    word-wrap: break-word;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.decoration-line {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    margin: 0 auto;
+    border-radius: 2px;
+    animation: pulse 2s infinite;
+}
+
+/* Menu de contato */
+.contact-menu {
+    animation: fadeInUp 1s ease-out 0.3s both;
+    overflow-y: auto;
+    max-height: calc(100vh - 350px);
+    padding-right: 15px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Cards de contato */
+.contact-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: white;
+    height: 80px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(0);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    animation: slideIn 0.6s ease-out;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    color: white;
+}
+
+.card-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 25px;
+    background: rgba(255,255,255,0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    margin-right: 15px;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.contact-card:hover .card-overlay {
+    left: 0;
+}
+
+/* Cores específicas para cada rede social */
+.linkedin .card-overlay { background: linear-gradient(135deg, #0077b5, #005885); }
+.github .card-overlay { background: linear-gradient(135deg, #5c5757, #24292e); }
+.instagram .card-overlay { background: linear-gradient(135deg, #e4405f, #fd1d1d, #fcb045); }
+.threads .card-overlay { background: linear-gradient(135deg, #000, #333); }
+.tiktok .card-overlay { background: linear-gradient(135deg, #ff0050, #000); }
+.youtube .card-overlay { background: linear-gradient(135deg, #ff0000, #cc0000); }
+.suno .card-overlay { background: linear-gradient(135deg, #b9751d, #191414); }
+.whatsapp .card-overlay { background: linear-gradient(135deg, #25d366, #128c7e); }
+.email .card-overlay { background: linear-gradient(135deg, #ea4335, #34a853); }
+
+/* Efeitos de hover específicos */
+.contact-card:hover .card-icon,
+.contact-card:hover .card-text {
+    transform: translateX(5px);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Animação do gradiente de fundo */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animação dos elementos flutuantes */
+@keyframes float {
+    0% {
+        transform: translateX(-100px) translateY(0px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(calc(100vw + 100px)) translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Animação de brilho pulsante */
+@keyframes shimmer {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+}
+
+/* Animações keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+    to {
+        text-shadow: 0 0 30px rgba(255,255,255,0.8), 0 0 40px rgba(255,255,255,0.3);
+    }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+/* Animação escalonada para os cards */
+.contact-card:nth-child(1) { animation-delay: 0.1s; }
+.contact-card:nth-child(2) { animation-delay: 0.2s; }
+.contact-card:nth-child(3) { animation-delay: 0.3s; }
+.contact-card:nth-child(4) { animation-delay: 0.4s; }
+.contact-card:nth-child(5) { animation-delay: 0.5s; }
+.contact-card:nth-child(6) { animation-delay: 0.6s; }
+.contact-card:nth-child(7) { animation-delay: 0.7s; }
+.contact-card:nth-child(8) { animation-delay: 0.8s; }
+.contact-card:nth-child(9) { animation-delay: 0.9s; }
+
+/* === RESPONSIVIDADE COMPLETA === */
+
+/* Desktop muito grande - 4K e monitores ultrawide */
+@media screen and (min-width: 1920px) {
+    .container {
+        padding: 80px;
+        max-width: 1400px;
+    }
+    
+    .main-title {
+        font-size: 5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    .contact-card {
+        height: 100px;
+    }
+    
+    .card-icon {
+        font-size: 2.8rem;
+    }
+    
+    .card-text {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop grande - 1200px+ */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+    .container {
+        padding: 60px;
+        max-width: 1200px;
+    }
+    
+    .main-title {
+        font-size: 4rem;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .contact-card {
+        height: 90px;
+    }
+    
+    .card-icon {
+        font-size: 2.4rem;
+    }
+    
+    .card-text {
+        font-size: 1.3rem;
+    }
+}
+
+/* Desktop médio - 992px a 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        padding: 50px;
+        min-height: 90vh;
+    }
+    
+    .main-title {
+        font-size: 3.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .contact-card {
+        height: 80px;
+    }
+    
+    .card-icon {
+        font-size: 2.2rem;
+    }
+    
+    .card-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablet grande - 768px a 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        padding: 40px;
+        min-height: 92vh;
+        border-radius: 18px;
+    }
+    
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .header-section {
+        margin-bottom: 40px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    
+    .contact-card {
+        height: 75px;
+    }
+    
+    .card-content {
+        padding: 0 22px;
+    }
+    
+    .card-icon {
+        font-size: 2rem;
+        margin-right: 15px;
+    }
+    
+    .card-text {
+        font-size: 1.15rem;
+    }
+    
+    /* Ajuste para elementos flutuantes em tablets */
+    .floating-circle {
+        opacity: 0.7;
+    }
+}
+
+/* Tablet pequeno / Mobile grande - 576px a 767px */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    body {
+        padding: 12px;
+    }
+    
+    .container {
+        padding: 30px;
+        min-height: 94vh;
+        border-radius: 16px;
+        margin: 0 auto;
+    }
+    
+    .main-title {
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+    
+    /* Ajustes para header no scroll */
+    .header-section.scrolled .always-visible {
+        font-size: 2.2rem !important;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .header-section {
+        margin-bottom: 35px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .contact-card {
+        height: 72px;
+    }
+    
+    .card-content {
+        padding: 0 20px;
+    }
+    
+    .card-icon {
+        font-size: 1.9rem;
+        margin-right: 14px;
+    }
+    
+    .card-text {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    
+    /* Reduzir elementos flutuantes */
+    .circle-4, .circle-5, .circle-6 {
+        display: none;
+    }
+}
+
+/* Mobile médio - 480px a 575px */
+@media screen and (min-width: 480px) and (max-width: 575px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 25px;
+        min-height: 95vh;
+        border-radius: 14px;
+        margin: 0;
+    }
+    
+    .main-title {
+        font-size: 2.4rem;
+        line-height: 1.1;
+        margin-bottom: 8px;
+    }
+    
+    /* Ajustes para header no scroll */
+    .header-section.scrolled .always-visible {
+        font-size: 2rem !important;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 18px;
+    }
+    
+    .header-section {
+        margin-bottom: 32px;
+    }
+    
+    .decoration-line {
+        width: 80px;
+        height: 2px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .contact-card {
+        height: 68px;
+        border-radius: 12px;
+    }
+    
+    .card-content {
+        padding: 0 18px;
+    }
+    
+    .card-icon {
+        font-size: 1.8rem;
+        margin-right: 13px;
+    }
+    
+    .card-text {
+        font-size: 1.05rem;
+        font-weight: 500;
+    }
+    
+    /* Menos elementos flutuantes */
+    .circle-3, .circle-4, .circle-5, .circle-6 {
+        display: none;
+    }
+}
+
+/* Comportamento de scroll para mobile */
+@media screen and (max-width: 767px) {
+    .header-section {
+        position: sticky;
+        top: 0;
+        background: rgba(0,0,0,0.1);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        z-index: 100;
+        padding: 10px 0;
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+    }
+    
+    .header-section.scrolled {
+        padding: 5px 0;
+        margin-bottom: 20px;
+    }
+    
+    .header-section.scrolled .hideable {
+        opacity: 0;
+        transform: translateY(-10px);
+        max-height: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .header-section.scrolled .always-visible {
+        font-size: 1.8rem !important;
+        margin-bottom: 5px;
+    }
+    
+    /* Garantir que o título seja sempre visível */
+    .main-title.always-visible {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative;
+        z-index: 101;
+    }
+    
+    /* Animação suave para transições */
+    .header-section .always-visible {
+        transition: font-size 0.3s ease, margin 0.3s ease;
+    }
+    
+    /* Estado compacto adicional para telas muito pequenas */
+    .header-section.scrolled .always-visible {
+        line-height: 1.1;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+}
+
+/* Mobile pequeno - 375px a 479px */
+@media screen and (min-width: 375px) and (max-width: 479px) {
+    body {
+        padding: 8px;
+    }
+    
+    .container {
+        padding: 20px;
+        min-height: 96vh;
+        border-radius: 12px;
+    }
+    
+    .main-title {
+        font-size: 2.2rem;
+        line-height: 1.1;
+        margin-bottom: 6px;
+    }
+    
+    /* Ajustes para header no scroll */
+    .header-section.scrolled .always-visible {
+        font-size: 1.7rem !important;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+    
+    .header-section {
+        margin-bottom: 28px;
+    }
+    
+    .decoration-line {
+        width: 70px;
+        height: 2px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .contact-card {
+        height: 64px;
+        border-radius: 10px;
+    }
+    
+    .card-content {
+        padding: 0 16px;
+    }
+    
+    .card-icon {
+        font-size: 1.7rem;
+        margin-right: 12px;
+    }
+    
+    .card-text {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    /* Apenas elementos essenciais */
+    .circle-2, .circle-3, .circle-4, .circle-5, .circle-6 {
+        display: none;
+    }
+    
+    /* Reduzir animação do gradiente para performance */
+    body {
+        animation-duration: 12s;
+    }
+}
+
+/* Mobile muito pequeno - até 374px */
+@media screen and (max-width: 374px) {
+    body {
+        padding: 5px;
+    }
+    
+    .container {
+        padding: 15px;
+        min-height: 97vh;
+        border-radius: 10px;
+        margin: 0;
+    }
+    
+    .main-title {
+        font-size: 1.9rem;
+        line-height: 1.1;
+        margin-bottom: 5px;
+    }
+    
+    /* Ajustes específicos para header no scroll em telas muito pequenas */
+    .header-section.scrolled .always-visible {
+        font-size: 1.5rem !important;
+    }
+    
+    .subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+    }
+    
+    .header-section {
+        margin-bottom: 24px;
+    }
+    
+    .decoration-line {
+        width: 60px;
+        height: 2px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .contact-card {
+        height: 60px;
+        border-radius: 8px;
+    }
+    
+    .card-content {
+        padding: 0 14px;
+    }
+    
+    .card-icon {
+        font-size: 1.6rem;
+        margin-right: 10px;
+    }
+    
+    .card-text {
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+    
+    /* Mínimo de elementos flutuantes */
+    .floating-circle {
+        display: none;
+    }
+    
+    /* Otimizações de performance */
+    body {
+        animation-duration: 15s;
+    }
+    
+    body::before {
+        animation-duration: 8s;
+    }
+    
+    .contact-card {
+        transition: all 0.2s ease;
+    }
+    
+    .contact-card:hover {
+        transform: translateY(-3px) scale(1.01);
+    }
+}
+
+/* Otimizações para dispositivos com touch */
+@media (hover: none) and (pointer: coarse) {
+    .contact-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .contact-card:active {
+        transform: translateY(-2px) scale(0.98);
+        transition: all 0.1s ease;
+    }
+}
+
+/* Modo paisagem para mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .container {
+        min-height: 90vh;
+        padding: 15px;
+    }
+    
+    .header-section {
+        margin-bottom: 20px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .contact-card {
+        height: 55px;
+    }
+    
+    .card-icon {
+        font-size: 1.5rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* === OTIMIZAÇÕES ESPECÍFICAS === */
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .main-title {
+        text-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+    
+    .card-overlay {
+        background-size: 200% 200%;
+    }
+    
+    .floating-circle {
+        border: 0.5px solid rgba(255,255,255,0.1);
+    }
+}
+
+/* Modo escuro do sistema */
+@media (prefers-color-scheme: dark) {
+    .container::before {
+        background: rgba(0,0,0,0.5);
+    }
+    
+    .card-content {
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.15);
+    }
+}
+
+/* Preferência por menos movimento/animação */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.1s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.1s !important;
+    }
+    
+    .floating-circle {
+        animation: none;
+        opacity: 0.3;
+    }
+    
+    body {
+        animation: none;
+        background: linear-gradient(135deg, rgb(230, 106, 24), rgb(82, 50, 19), rgba(0,2,6,1));
+    }
+    
+    body::before {
+        animation: none;
+    }
+}
+
+/* Dispositivos com pouca bateria */
+@media (prefers-reduced-motion: reduce) {
+    .floating-elements {
+        display: none;
+    }
+    
+    body::before {
+        display: none;
+    }
+}
+
+/* iOS Safari específico */
+@supports (-webkit-touch-callout: none) {
+    .contact-card {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+}
+
+/* Android Chrome específico */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .menu-grid {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Notch/Safe Area para iPhone X+ */
+@supports (padding: max(0px)) {
+    body {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+        padding-top: max(20px, env(safe-area-inset-top));
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
+    }
+}
+
+/* Telas muito largas (TVs, monitores ultrawide) */
+@media screen and (min-width: 2560px) {
+    .container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Print styles */
+@media print {
+    .floating-elements,
+    .card-overlay {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        animation: none !important;
+    }
+    
+    .container {
+        background: white !important;
+        box-shadow: none !important;
+    }
+    
+    .contact-card {
+        background: #f5f5f5 !important;
+        color: black !important;
+        border: 1px solid #ccc !important;
+    }
+}

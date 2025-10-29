@@ -1,0 +1,138 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://info.cassiofernandooliveira.com.br/#person",
+      "name": "Cássio Fernando de Oliveira",
+      "givenName": "Cássio Fernando",
+      "familyName": "de Oliveira",
+      "jobTitle": "Desenvolvedor Full Stack",
+      "description": "Desenvolvedor Full Stack especializado em desenvolvimento de sistemas web e aplicações modernas. Experiência em .NET CORE C#, Angular e tecnologias relacionadas.",
+      "url": "https://info.cassiofernandooliveira.com.br/",
+      "image": "https://info.cassiofernandooliveira.com.br/favicons/android-chrome-512x512.png",
+      "telephone": "+55-16-99297-0597",
+      "email": "contato@cassiofernandooliveira.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ribeirão Preto",
+        "addressRegion": "São Paulo",
+        "addressCountry": "BR",
+        "postalCode": "14000-000"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "CFO SYSTEMS DEVELOPMENT",
+        "description": "Empresa de desenvolvimento de Software e soluções em tecnologia"
+      },
+      "knowsAbout": [
+        "JavaScript",
+        "TypeScript", 
+        ".Net (C#)",
+        "MongoDB",
+        "Oracle Database",
+        "PostgreSQL",
+        "SQL Server",
+        "MySQL",
+        "Angular",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "Git",
+        "Docker",
+        "Kubernetes",
+        "Microservices",
+        "RabbitMQ",
+        "RESTful APIs",
+        "AWS",
+        "Full Stack Development",
+        "Web Development",
+        "System Analysis",
+        "Software Architecture",
+        "API Development",
+        "Database Design",
+        "Responsive Design",
+        "Agile Methodologies"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/cassiofernandooliveira/",
+        "https://github.com/cfo-cassiooliveira",
+        "https://www.instagram.com/cfo.cassiooliveira/",
+        "https://www.youtube.com/@cfo.cassiooliveira",
+        "https://www.tiktok.com/@cfo.cassiooliveira",
+        "https://www.threads.com/@cfo.cassiooliveira",
+        "https://suno.com/@cfo_cassiooliveira"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+55-16-99297-0597",
+          "contactType": "customer service",
+          "availableLanguage": ["Portuguese", "English"],
+          "contactOption": "TollFree"
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "contato@cassiofernandooliveira.com.br",
+          "contactType": "customer service",
+          "availableLanguage": ["Portuguese", "English"]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://info.cassiofernandooliveira.com.br",
+      "url": "https://info.cassiofernandooliveira.com.br/",
+      "name": "Cássio Fernando de Oliveira - Desenvolvedor Full Stack",
+      "description": "Site de contato e redes sociais profissionais de Cássio Fernando de Oliveira, Desenvolvedor Full Stack em Ribeirão Preto-SP",
+      "inLanguage": "pt-BR",
+      "author": {
+        "@id": "https://info.cassiofernandooliveira.com.br"
+      },
+      "copyrightHolder": {
+        "@id": "https://info.cassiofernandooliveira.com.br"
+      },
+      "copyrightYear": "2025",
+      "genre": "Professional Portfolio",
+      "keywords": "desenvolvedor full stack, programador, analista de sistemas, javascript, .NET, angular, RabbitMQ, ribeirão preto, são paulo, brasil"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://info.cassiofernandooliveira.com.br",
+      "url": "https://info.cassiofernandooliveira.com.br",
+      "name": "Contato - Cássio Fernando de Oliveira",
+      "description": "Entre em contato com Cássio Fernando de Oliveira através das redes sociais profissionais: LinkedIn, GitHub, WhatsApp, Email e outras plataformas",
+      "isPartOf": {
+        "@id": "https://info.cassiofernandooliveira.com.br"
+      },
+      "about": {
+        "@id": "https://info.cassiofernandooliveira.com.br"
+      },
+      "primaryImageOfPage": "https://info.cassiofernandooliveira.com.br/favicons/android-chrome-512x512.png",
+      "datePublished": "2025-10-07T08:00:00+00:00",
+      "dateModified": "2025-10-07T08:00:00+00:00",
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://info.cassiofernandooliveira.com.br",
+      "name": "Desenvolvimento de Sistemas Full Stack",
+      "description": "Serviços profissionais de desenvolvimento de aplicações web, sistemas personalizados, APIs e soluções tecnológicas completas",
+      "provider": {
+        "@id": "https://info.cassiofernandooliveira.com.br"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Brasil",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-21.1775",
+          "longitude": "-47.8099"
+        }
+      },
+      "availableLanguage": ["Portuguese", "English"],
+      "serviceType": "Software Development",
+      "category": "Technology Services"
+    }
+  ]
+}

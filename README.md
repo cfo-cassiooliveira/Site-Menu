@@ -9,7 +9,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 [![SEO](https://img.shields.io/badge/SEO_Optimized-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://developers.google.com/search/docs)
 
-<img src="favicons/android-chrome-512x512.png" alt="Logo" width="120" style="border-radius: 50%"/>
+<img src="https://info.cassiofernandooliveira.com.br/favicons/logo.png" alt="Logo" width="120" style="border-radius: 50%"/>
 
 **Site de contato profissional com design moderno, animações fluidas e otimizado para SEO e IAs**
 

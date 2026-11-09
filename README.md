@@ -198,6 +198,18 @@ rgb(40, 20, 60)    /* Roxo escuro */
 
 ---
 
+## 🧪 Qualidade (SonarQube)
+
+A análise usa o SonarQube local do projeto `../sonarqube` (http://localhost:9001) e o Quality Gate do workspace.
+
+```bash
+../sonarqube/scripts/scan.sh .        # análise e Quality Gate
+```
+
+O site é só HTML e CSS. Se ganhar JavaScript, ele precisa vir com testes e cobertura, como no Site-Principal.
+
+---
+
 ## 📄 Licença
 
 Este projeto é de código aberto e está disponível para estudo e referência.

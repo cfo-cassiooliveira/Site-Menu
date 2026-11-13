@@ -12,7 +12,7 @@
       "url": "https://info.cassiofernandooliveira.com.br/",
       "image": "https://info.cassiofernandooliveira.com.br/favicons/android-chrome-512x512.png",
       "telephone": "+55-16-99297-0597",
-      "email": "contato@cassiofernandooliveira.com.br",
+      "email": "cassio.fernando@live.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Ribeirão Preto",
@@ -73,7 +73,7 @@
         },
         {
           "@type": "ContactPoint",
-          "email": "contato@cassiofernandooliveira.com.br",
+          "email": "cassio.fernando@live.com",
           "contactType": "customer service",
           "availableLanguage": ["Portuguese", "English"]
         }

@@ -191,7 +191,7 @@ rgb(40, 20, 60)    /* Roxo escuro */
 ## 🤝 Contato Profissional
 
 **Cássio Fernando de Oliveira**
-- 📧 Email: contato@cassiofernandooliveira.com.br
+- 📧 Email: cassio.fernando@live.com
 - 📱 WhatsApp: +55 16 99297-0597
 - 📍 Localização: Ribeirão Preto, São Paulo, Brasil
 - 🌐 Website: https://info.cassiofernandooliveira.com.br

@@ -7,7 +7,7 @@
 **Empresa:** CFO SYSTEMS DEVELOPMENT  
 **Localização:** Ribeirão Preto, São Paulo, Brasil  
 **Telefone:** +55 16 99297-0597  
-**Email:** contato@cassiofernandooliveira.com.br  
+**Email:** cassio.fernando@live.com  
 
 ## Especialidades e Tecnologias
 
@@ -79,7 +79,7 @@
 
 ### Contato Direto
 - **WhatsApp:** https://api.whatsapp.com/send?phone=+5516992970597
-- **Email:** contato@cassiofernandooliveira.com.br
+- **Email:** cassio.fernando@live.com
 
 ### Redes Sociais
 - **Instagram:** https://www.instagram.com/cfo.cassiooliveira/

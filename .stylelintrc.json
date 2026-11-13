@@ -1,0 +1,18 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "declaration-no-important": true,
+    "color-no-hex": true,
+    "selector-max-id": 0,
+    "selector-class-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+      { "message": "Use kebab-case com BEM (bloco__elemento--modificador)" }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["css/tokens.css"],
+      "rules": { "color-no-hex": null }
+    }
+  ]
+}

@@ -116,15 +116,12 @@ Este projeto representa um **site de portfólio e contatos profissionais** de ú
 
 ### Frontend
 - **HTML5**: Estrutura semântica moderna
-- **CSS3**: Animações, Grid, Flexbox, Custom Properties
-- **JavaScript**: Scroll detection, responsividade dinâmica
-- **Bootstrap 5.3.3**: Sistema de grid e componentes
-- **Bootstrap Icons 1.11.3**: Ícones das redes sociais
-- **jQuery 3.7.1**: Manipulação DOM
+- **CSS3**: mobile-first, Grid, Flexbox e design tokens (`css/tokens.css`); animações desligadas com `prefers-reduced-motion`
+- **Bootstrap Icons 1.11.3**: ícones das redes sociais (CDN com SRI)
+- Sem JavaScript e sem rastreamento de terceiros: a página não grava cookies (LGPD)
 
-### SEO e Analytics
+### SEO
 - **Schema.org**: Dados estruturados
-- **Google Tag Manager**: Rastreamento de eventos
 - **Open Graph Protocol**: Compartilhamento em redes sociais
 - **Twitter Cards**: Preview de links no Twitter
 
@@ -203,6 +200,7 @@ rgb(40, 20, 60)    /* Roxo escuro */
 A análise usa o SonarQube local do projeto `../sonarqube` (http://localhost:9001) e o Quality Gate do workspace.
 
 ```bash
+npm ci && npm test                    # html-validate, Stylelint e Vitest (responsividade, contraste, SEO, privacidade)
 ../sonarqube/scripts/scan.sh .        # análise e Quality Gate
 ```
 
@@ -221,10 +219,7 @@ Este projeto é de código aberto e está disponível para estudo e referência.
 Desenvolvido com 💙 por **Cássio Fernando de Oliveira**
 
 Tecnologias utilizadas:
-- [Bootstrap](https://getbootstrap.com/) - Framework CSS
 - [Bootstrap Icons](https://icons.getbootstrap.com/) - Biblioteca de ícones
-- [jQuery](https://jquery.com/) - Biblioteca JavaScript
-- [Google Tag Manager](https://tagmanager.google.com/) - Analytics
 
 ---
 

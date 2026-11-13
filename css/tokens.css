@@ -1,0 +1,46 @@
+/* Design tokens do Site-Menu: única fonte de cores, espaços e medidas (Stylelint barra hex fora deste arquivo). */
+
+:root {
+    /* Paleta */
+    --color-ink: #fff;
+    --color-ink-soft: #d9d9d9;
+    --color-night: #000206;
+    --color-orange: #e66a18;
+    --color-orange-light: #ff8c3c;
+    --color-brown: #523213;
+    --color-brown-light: #785028;
+    --color-rust: #b93f06;
+    --color-glass: rgb(255 255 255 / 10%);
+    --color-glass-border: rgb(255 255 255 / 25%);
+    --color-shade: rgb(0 0 0 / 45%);
+    --color-focus: #fff;
+
+    /* Cores das redes no hover/foco: todas com contraste >= 5:1 contra o texto branco */
+    --brand-linkedin: linear-gradient(135deg, #0a66c2, #004182);
+    --brand-github: linear-gradient(135deg, #3d444d, #24292e);
+    --brand-instagram: linear-gradient(135deg, #c13584, #833ab4);
+    --brand-threads: linear-gradient(135deg, #1c1c1c, #333);
+    --brand-tiktok: linear-gradient(135deg, #c8003f, #25010d);
+    --brand-youtube: linear-gradient(135deg, #c00, #8f0000);
+    --brand-suno: linear-gradient(135deg, #8a5a14, #191414);
+    --brand-whatsapp: linear-gradient(135deg, #0b7a5f, #075e54);
+    --brand-email: linear-gradient(135deg, #c5221f, #1e6e34);
+
+    /* Escala de espaçamento (múltiplos de 4px) */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 2.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1.25rem;
+    --shadow-board: 0 1.25rem 3.75rem rgb(0 2 6 / 80%), inset 0 0 7.5rem rgb(0 0 0 / 30%);
+    --shadow-card: 0 0.5rem 1.5rem rgb(0 0 0 / 30%);
+    --shadow-card-hover: 0 1rem 2.5rem rgb(0 0 0 / 40%);
+    --font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+    --duration-fast: 0.3s;
+    --z-decoration: 0;
+    --z-content: 1;
+}

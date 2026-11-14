@@ -69,6 +69,10 @@
 
 ## Redes Sociais e Contatos Profissionais
 
+### Portfólio
+- URL: https://cassiofernandooliveira.com.br/
+- Descrição: Site principal com experiência, projetos, stack, formação e currículo em PDF
+
 ### LinkedIn
 - URL: https://www.linkedin.com/in/cassiofernandooliveira/
 - Descrição: Perfil profissional completo com experiências e conexões da área
@@ -85,7 +89,6 @@
 - **Instagram:** https://www.instagram.com/cfo.cassiooliveira/
 - **YouTube:** https://www.youtube.com/@cfo.cassiooliveira
 - **TikTok:** https://www.tiktok.com/@cfo.cassiooliveira
-- **Threads:** https://www.threads.com/@cfo.cassiooliveira
 - **Suno.com:** https://suno.com/@cfo_cassiooliveira
 
 ## Localização e Atendimento

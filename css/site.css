@@ -204,10 +204,10 @@ body {
     transform: scaleX(1);
 }
 
+.contact-card--portfolio { --brand: var(--brand-portfolio); }
 .contact-card--linkedin { --brand: var(--brand-linkedin); }
 .contact-card--github { --brand: var(--brand-github); }
 .contact-card--instagram { --brand: var(--brand-instagram); }
-.contact-card--threads { --brand: var(--brand-threads); }
 .contact-card--tiktok { --brand: var(--brand-tiktok); }
 .contact-card--youtube { --brand: var(--brand-youtube); }
 .contact-card--suno { --brand: var(--brand-suno); }

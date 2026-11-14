@@ -13,7 +13,7 @@
 
 **Site de contato profissional com design moderno, animações fluidas e otimizado para SEO e IAs**
 
-[🌐 Ver Site](https://info.cassiofernandooliveira.com.br) • [💼 LinkedIn](https://www.linkedin.com/in/cassiofernandooliveira/) • [💻 GitHub](https://github.com/cfo-cassiooliveira)
+[🌐 Ver Site](https://info.cassiofernandooliveira.com.br) • [🗂️ Portfólio](https://cassiofernandooliveira.com.br) • [💼 LinkedIn](https://www.linkedin.com/in/cassiofernandooliveira/) • [💻 GitHub](https://github.com/cfo-cassiooliveira)
 
 </div>
 
@@ -53,7 +53,7 @@ Este projeto representa um **site de portfólio e contatos profissionais** de ú
 - **Gradiente Animado em 7 Cores**: Background que se move suavemente em 8 segundos
 - **6 Partículas Flutuantes**: Elementos decorativos com rotação 360° e movimento horizontal
 - **Brilho Pulsante**: Overlay radial com efeito de respiração
-- **Cards Interativos**: 9 cards de redes sociais com:
+- **Cards Interativos**: 9 cards (portfólio, redes sociais e contatos) com:
   - Efeito hover com elevação e escala
   - Overlay colorido específico para cada rede
   - Transições suaves com cubic-bezier
@@ -159,10 +159,10 @@ rgb(40, 20, 60)    /* Roxo escuro */
 ```
 
 ### Cores das Redes Sociais
+- 🟣 **Portfólio** (Site-Principal): `#4652c8 → #2e378f`
 - 🔵 **LinkedIn**: `#0077b5 → #005885`
 - ⚫ **GitHub**: `#333 → #24292e`
 - 🌈 **Instagram**: `#e4405f → #fd1d1d → #fcb045`
-- ⚫ **Threads**: `#000 → #333`
 - ⚪ **TikTok**: `#ff0050 → #000`
 - 🔴 **YouTube**: `#ff0000 → #cc0000`
 - 🟢 **Suno**: `#1db954 → #191414`

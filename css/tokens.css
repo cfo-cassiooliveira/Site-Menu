@@ -16,10 +16,10 @@
     --color-focus: #fff;
 
     /* Cores das redes no hover/foco: todas com contraste >= 5:1 contra o texto branco */
+    --brand-portfolio: linear-gradient(135deg, #4652c8, #2e378f);
     --brand-linkedin: linear-gradient(135deg, #0a66c2, #004182);
     --brand-github: linear-gradient(135deg, #3d444d, #24292e);
     --brand-instagram: linear-gradient(135deg, #c13584, #833ab4);
-    --brand-threads: linear-gradient(135deg, #1c1c1c, #333);
     --brand-tiktok: linear-gradient(135deg, #c8003f, #25010d);
     --brand-youtube: linear-gradient(135deg, #c00, #8f0000);
     --brand-suno: linear-gradient(135deg, #8a5a14, #191414);

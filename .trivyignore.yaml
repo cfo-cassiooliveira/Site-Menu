@@ -1,0 +1,3 @@
+# Exceções do Trivy: só com justificativa e `expired_at` (ver security.md). Vazio = nenhuma exceção.
+vulnerabilities: []
+misconfigurations: []

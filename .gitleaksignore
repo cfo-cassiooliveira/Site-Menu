@@ -1,0 +1,1 @@
+# Falsos positivos do gitleaks: fingerprint + comentário com o motivo (ver security.md). Vazio = nenhuma exceção.

@@ -1,0 +1,56 @@
+# CI de repositório público de portfólio (Art. V; varreduras do security.md; regra do ADR-0004 do Workspace).
+name: ci
+
+on:
+  push:
+    branches: [master, 'DEV-*']
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Mesmas imagens (tag + digest) dos demais projetos.
+  GITLEAKS_IMAGE: zricethezav/gitleaks:v8.28.0@sha256:cdbb7c955abce02001a9f6c9f602fb195b7fadc1e812065883f695d1eeaba854
+  TRIVY_IMAGE: aquasec/trivy:0.76.1@sha256:790fd66d1697395d8693d1acaa1ea702406a20f109b6fc7bac8db623eca6c06c
+
+jobs:
+  secrets:
+    name: gitleaks (segredos em todo o histórico)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          fetch-depth: 0
+      # Falsos positivos ficam no .gitleaksignore (fingerprint + motivo).
+      - run: docker run --rm -v "$PWD:/repo" "$GITLEAKS_IMAGE" git /repo --no-banner --redact --exit-code 1
+
+  trivy:
+    name: Trivy fs (CVEs e misconfig)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      # Exceções só em .trivyignore.yaml, com justificativa e expired_at.
+      - run: >-
+          docker run --rm -v "$PWD:/src" "$TRIVY_IMAGE" fs --scanners vuln,misconfig
+          --severity HIGH,CRITICAL --ignore-unfixed --skip-version-check --ignorefile /src/.trivyignore.yaml
+          --exit-code 1 /src
+
+  test:
+    name: build e testes
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
